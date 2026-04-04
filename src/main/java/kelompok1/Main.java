@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             boolean running = true;
+            
             while (running) {
                 System.out.println("\n╔════════════════════════════════════════════╗");
                 System.out.println("║   PROGRAM PENGOLAHAN NILAI MAHASISWA       ║");

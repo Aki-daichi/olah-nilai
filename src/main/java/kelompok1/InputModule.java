@@ -6,7 +6,10 @@ public class InputModule {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static double[] getValidScores() {
-        double tugas, uts, uas;
+        double tugas; 
+        double uts; 
+        double uas;
+        
         while (true) {
             System.out.print("Masukkan Nilai Tugas: ");
             tugas = scanner.nextDouble();
