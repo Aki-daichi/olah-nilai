@@ -1,8 +1,12 @@
 C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\App.java
-C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\CalculationModule.java
-C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\GradeModule.java
+C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\ConsoleInputHandler.java
+C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\FinalResult.java
+C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\FinalScoreCalculator.java
 C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\GradeProcessor.java
-C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\InputModule.java
+C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\InputHandler.java
 C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\Main.java
-C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\StatusModule.java
-C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\ValidationModule.java
+C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\ResultEvaluator.java
+C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\ScoreCalculator.java
+C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\ScoreEvaluator.java
+C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\ScoreValidator.java
+C:\Users\Overlord\Documents\_POLBAN\SEMESTER 6\Testing\WEEK 06\olah-nilai\src\main\java\kelompok1\StudentScore.java

@@ -1,8 +1,12 @@
+kelompok1\ConsoleInputHandler.class
+kelompok1\FinalScoreCalculator.class
 kelompok1\Main.class
-kelompok1\StatusModule.class
-kelompok1\CalculationModule.class
-kelompok1\InputModule.class
+kelompok1\ScoreCalculator.class
+kelompok1\InputHandler.class
+kelompok1\ScoreValidator.class
 kelompok1\GradeProcessor.class
-kelompok1\GradeModule.class
+kelompok1\StudentScore.class
+kelompok1\ScoreEvaluator.class
+kelompok1\ResultEvaluator.class
 kelompok1\App.class
-kelompok1\ValidationModule.class
+kelompok1\FinalResult.class
