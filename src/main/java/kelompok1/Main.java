@@ -1,10 +1,18 @@
 package kelompok1;
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
+            
+            // 1. Instansiasi Objek (Dependency Injection)
+            ScoreValidator validator = new ScoreValidator();
+            InputHandler inputHandler = new ConsoleInputHandler(scanner, validator);
+            FinalScoreCalculator calculator = new ScoreCalculator(validator);
+            ResultEvaluator evaluator = new ScoreEvaluator();
+            
+            GradeProcessor processor = new GradeProcessor(inputHandler, calculator, evaluator);
+            
             boolean running = true;
             
             while (running) {
@@ -20,11 +28,17 @@ public class Main {
 
                 switch (choice) {
                     case 1 -> {
-                        String[] result = GradeProcessor.process();
+                        FinalResult result = processor.process();
                         System.out.println("\n HASIL PENGOLAHAN:");
-                        System.out.printf("Nilai Akhir : %s%n", result[0]);
-                        System.out.printf("Grade       : %s%n", result[1]);
-                        System.out.printf("Status      : %s%n", result[2]);
+                        if (result.isError()) {
+                            System.out.println("Nilai Akhir : ERROR");
+                            System.out.println("Grade       : -");
+                            System.out.println("Status      : -");
+                        } else {
+                            System.out.printf("Nilai Akhir : %.2f%n", result.getNilaiAkhir());
+                            System.out.printf("Grade       : %s%n", result.getGrade());
+                            System.out.printf("Status      : %s%n", result.getStatus());
+                        }
                         System.out.println("────────────────────────────────────────────");
                     }
                     case 2 -> {

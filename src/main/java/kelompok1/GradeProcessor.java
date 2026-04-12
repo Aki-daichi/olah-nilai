@@ -1,28 +1,29 @@
 package kelompok1;
 
 public class GradeProcessor {
-    public static String[] process() {
-        // 1. Ambil data valid dari modul input
-        double[] scores = InputModule.getValidScores();
-        double tugas = scores[0];
-        double uts   = scores[1];
-        double uas   = scores[2];
+    private final InputHandler inputHandler;
+    private final FinalScoreCalculator calculator;
+    private final ResultEvaluator evaluator;
 
-        // 2. Hitung nilai akhir
-        double nilaiAkhir = CalculationModule.calculateFinal(tugas, uts, uas);
-        if (nilaiAkhir == -1) {
-            return new String[]{"ERROR", "-", "-"};
+    public GradeProcessor(InputHandler inputHandler, FinalScoreCalculator calculator, ResultEvaluator evaluator) {
+        this.inputHandler = inputHandler;
+        this.calculator = calculator;
+        this.evaluator = evaluator;
+    }
+
+    public FinalResult process() {
+        StudentScore score = inputHandler.getValidScore();
+        double nilaiAkhir;
+
+        try {
+            nilaiAkhir = calculator.calculateFinal(score);
+        } catch (IllegalArgumentException ex) {
+            return new FinalResult(-1, '-', "ERROR", true);
         }
 
-        // 3. Tentukan Grade & Status
-        char grade = GradeModule.getGrade(nilaiAkhir);
-        String status = StatusModule.getGraduationStatus(nilaiAkhir);
+        char grade = evaluator.getGrade(nilaiAkhir);
+        String status = evaluator.getGraduationStatus(nilaiAkhir);
 
-        // 4. Kembalikan hasil ke Main Program sebagai interface
-        return new String[]{
-            String.format("%.2f", nilaiAkhir),
-            String.valueOf(grade),
-            status
-        };
+        return new FinalResult(nilaiAkhir, grade, status, false);
     }
 }
